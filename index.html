@@ -1,98 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Somatoform Disorders in Psychiatry</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #004466;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      margin-bottom: 10px;
-    }
-    nav {
-      background: #006699;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a, nav button {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    nav a:hover, nav button:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #004466;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #004466;
-      color: #fff;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somatic Symptom and Related Disorders (SSRD) - Comprehensive Lecture Notes</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #e53e3e;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --text-muted: #718096;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Profile Section styling */
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .profile-info h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .profile-info .title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .profile-info p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        /* Main Content Styling */
+        .lecture-content {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-top: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.25rem;
+            margin-top: 25px;
+        }
+
+        p, ul, ol {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
+
+        /* Alert/Callout Boxes */
+        .callout {
+            background-color: #ebf8ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout-alert {
+            background-color: #fff5f5;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        /* Primary Care Algorithm Grid */
+        .algorithm-step {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--secondary-color);
+            color: white;
+            font-weight: bold;
+            min-width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .lecture-content {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <img src="https://i.ibb.co/Wvk1qLDZ/IMG-20260522-WA0003.jpg" alt="Dr. Hamid Fazal">
-  <h1>Dr. Hamid Fazal</h1>
-  <p>MBBS, MD (USA), PGD (Nutrition)</p>
-</header>
+<div class="container">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#somatoform">Somatoform Disorders</a>
-  <a href="#treatment">Treatment Options</a>
-  <a href="#contact">Contact</a>
-  <button onclick="window.print()">Download PDF</button>
-</nav>
+    <!-- Profile Header Section -->
+    <div class="profile-card">
+        <img src="https://i.ibb.co/Wvk1qLDZ/IMG-20260522-WA0003.jpg" alt="Dr. Hamid Fazal" class="profile-img">
+        <div class="profile-info">
+            <h2>Dr. Hamid Fazal</h2>
+            <div class="title">MBBS, MD (USA), PGD (Nutrition)</div>
+            <p>Dr. Hamid Fazal is a physician working at the intersection of chronic disease and mental health. He has experience in ICU medicine, CKD and dialysis care, and served for four years as OPD In-charge managing patients with chronic kidney disease, diabetes, and hypertension. He is also involved in psychiatry community outreach services, including care for patients with neurodevelopmental and neurocognitive disorders such as epilepsy, cerebral palsy, intellectual disability, and behavioral conditions. His clinical and academic interests include neuropsychiatry, cognitive aging, dementia, nutrition in chronic disease, and psychiatric manifestations of chronic medical illnesses. He is passionate about leveraging AI-assisted tools and evidence-based approaches to develop accessible medical education resources for clinicians, students, and healthcare professionals worldwide, while working toward expanding community support services for special-needs children.</p>
+        </div>
+    </div>
 
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Dr. Hamid Fazal, MBBS, MD (USA), PGD (Nutrition), is a physician working
+    <!-- Main Lecture Content -->
+    <div class="lecture-content">
+        <h1>Somatic Symptom and Related Disorders (SSRD)</h1>
+        <p style="font-weight: 500; color: var(--text-muted);">Comprehensive Physician Lecture Notes &bull; Based on DSM-5-TR, current psychiatric practice, and evidence-based pharmacological management</p>
+        
+        <hr>
+
+        <h2>Introduction</h2>
+        <p>Somatic Symptom and Related Disorders (SSRD) represent a complex interface between several core medical fields:</p>
+        <ul>
+            <li>Psychiatry</li>
+            <li>Neurology</li>
+            <li>Internal medicine</li>
+            <li>Behavioral medicine and psychosomatic medicine</li>
+        </ul>
+        
+        <p>These disorders are highly prevalent across multiple specialized settings including:</p>
+        <ul>
+            <li>Primary care and internal medicine clinics</li>
+            <li>Emergency departments</li>
+            <li>Neurology practices</li>
+            <li>Chronic pain clinics</li>
+        </ul>
+
+        <div class="callout-alert">
+            <div class="callout-title">Clinical Impact</div>
+            SSRD conditions are structurally associated with excessive healthcare utilization, systemic polypharmacy, recurrent diagnostic overtesting, functional disability, a severely reduced quality of life, and an increased risk of suicide within specific patient subgroups.
+        </div>
+
+        <h2>Learning Objectives</h2>
+        <p>By the end of this lecture, physicians should be able to:</p>
+        <ul>
+            <li>Understand the updated classification of SSRD.</li>
+            <li>Accurately differentiate between major somatic-related disorders.</li>
+            <li>Apply modern DSM-5-TR diagnostic principles in clinical encounters.</li>
+            <li>Identify clinical "red flags" that mandate exhaustive medical evaluation.</li>
+            <li>Implement evidence-based pharmacological interventions safely.</li>
+            <li>Proactively avoid iatrogenic harm and execute structured multidisciplinary care.</li>
+        </ul>
+
+        <h2>Historical Evolution</h2>
+        <p>Older clinical terminology previously recognized these conditions as:</p>
+        <ul>
+            <li><em>"Psychosomatic disorders"</em></li>
+            <li><em>"Somatoform disorders"</em></li>
+            <li><em>"Hypochondriasis"</em></li>
+            <li><em>"Hysteria"</em></li>
+        </ul>
+        <p>The DSM-5 deliberately replaced these legacy frameworks with updated classifications that emphasize <strong>distress, functional dysfunction, and maladaptive illness behaviors</strong> rather than the restrictive baseline of "medically unexplained symptoms."</p>
+        
+        <div class="callout">
+            <div class="callout-title">Why This Matters</div>
+            Many patients possess genuine, verified medical diseases running concurrently with maladaptive symptom amplification. Objective functional impairment remains a higher clinical priority than the absolute "absence of pathology."
+        </div>
+
+        <h2>DSM-5-TR Classification</h2>
+        <p>The core framework includes the following major disorders:</p>
+        <ol>
+            <li><strong>Somatic Symptom Disorder (SSD)</strong></li>
+            <li><strong>Illness Anxiety Disorder (IAD)</strong></li>
+            <li><strong>Conversion Disorder</strong> (Functional Neurological Symptom Disorder)</li>
+            <li><strong>Factitious Disorder</strong></li>
+            <li><strong>Psychological Factors Affecting Other Medical Conditions</strong></li>
+            <li><strong>Other Specified / Unspecified SSRD</strong></li>
+        </ol>
+
+        <h2>Epidemiology</h2>
+        <h3>Somatic Symptom Disorder (SSD)</h3>
+        <ul>
+            <li>Highly common in primary care settings with a recognized female predominance.</li>
+            <li>Frequently coexists with widespread comorbidities such as anxiety, depression, fibromyalgia, Irritable Bowel Syndrome (IBS), and chronic fatigue syndrome.</li>
+        </ul>
+
+        <h3>Illness Anxiety Disorder (IAD)</h3>
+        <ul>
+            <li>Estimated baseline prevalence ranges between ~0.1–1%.</li>
+            <li>Demonstrates an equal gender distribution across demographic populations.</li>
+        </ul>
+
+        <h3>Conversion Disorder</h3>
+        <ul>
+            <li>More frequently encountered within specialized neurology clinics, acute trauma populations, and young adult demographics.</li>
+        </ul>
+
+        <h2>Neurobiology and Pathophysiology</h2>
+        <p>Current clinical evidence strongly implicates distinct underlying biological abnormalities:</p>
+        <ul>
+            <li>Central pain processing errors and maladaptive limbic system hyperactivation.</li>
+            <li>Autonomic dysregulation combined with Chronic HPA axis dysfunction.</li>
+            <li>Disrupted predictive coding patterns that manifest physically as symptom amplification.</li>
+        </ul>
+        <p>Functional neuroimaging studies consistently demonstrate altered metabolic activation within the <strong>anterior cingulate cortex, insula, amygdala, and prefrontal cortex</strong>.</p>
+
+        <hr>
+
+        <h2>1. Somatic Symptom Disorder (SSD)</h2>
+        <h3>Core Concept</h3>
+        <p>Characterized by physical symptoms paired with an excessive, maladaptive psychological response. <strong>The physical symptoms are entirely real; the clinical suffering is genuine.</strong></p>
+
+        <h3>DSM-5-TR Diagnostic Criteria</h3>
+        <ul>
+            <li>Requires at least <strong>&ge;1 distressing somatic symptom</strong>.</li>
+            <li>Accompanied by excessive, disproportionate thoughts, persistent high anxiety, or time-consuming behaviors related to the symptoms.</li>
+            <li>A persistent state of presentation, typically sustained for <strong>&gt;6 months</strong>.</li>
+        </ul>
+
+        <h3>Common Presentations</h3>
+        <ul>
+            <li><strong>Pain-Predominant:</strong> Back pain, chronic headaches, pelvic pain, or atypical chest pain.</li>
+            <li><strong>Multisystem Symptoms:</strong> Chronic fatigue, complex GI complaints, localized weakness, dizziness, and palpitations.</li>
+        </ul>
+
+        <h3>Clinical Clues</h3>
+        <p>Patients with SSD frequently demonstrate a history of visiting multiple independent physicians ("doctor shopping"), requesting repetitive clinical investigations, harboring catastrophic health interpretations despite negative findings, and fearing severe illness. <br><em>Example: "Doctor, this headache must be brain cancer."</em></p>
+
+        <div class="callout-alert">
+            <div class="callout-title">Differential Diagnosis Warning</div>
+            Always actively exclude underlying endocrine disorders, autoimmune diseases, early-stage neurological illnesses, occult malignancies, medication adverse effects, or substance use. <strong>Never prematurely label physical symptoms as purely psychiatric.</strong>
+        </div>
+
+        <h2>2. Illness Anxiety Disorder (IAD)</h2>
+        <h3>Core Feature</h3>
+        <p>A driving preoccupation and fear of contracting or having a serious illness despite minimal to completely absent physical symptoms (previously conceptualized under <em>Hypochondriasis</em>).</p>
+
+        <h3>Typical Behavioral Classifications</h3>
+        <ul>
+            <li><strong>Care-seeking type:</strong> Frequent medical consultations, repetitive testing requests, and exhaustive internet searches.</li>
+            <li><strong>Care-avoidant type:</strong> Complete avoidance of hospitals, diagnostic testing, or medical discussions due to intense anxiety.</li>
+        </ul>
+        <p>Common clinical fixations center on feared diagnoses such as advanced cancer, HIV, sudden heart attacks, acute strokes, or progressive neurodegenerative diseases.</p>
+
+        <h2>3. Conversion Disorder (Functional Neurological Symptom Disorder)</h2>
+        <p>Characterized by distinct neurological symptoms (motor or sensory) that are clinically incompatible with recognized pathophysiological or neurological diseases.</p>
+
+        <h3>Common Presentations</h3>
+        <ul>
+            <li><strong>Motor:</strong> Functional weakness, paralysis, tremors, or prominent gait disturbances.</li>
+            <li><strong>Sensory:</strong> Acute functional blindness, localized numbness, or sudden deafness.</li>
+            <li><strong>Seizure-like:</strong> Functional seizures, also historically categorized as Psychogenic Non-Epileptic Seizures (PNES).</li>
+        </ul>
+
+        <h3>Positive Clinical Signs</h3>
+        <p>Diagnostic validation should not rely purely on normal imaging or lab profiles. Clinicians must identify objective positive signs during physical examination:</p>
+        <ul>
+            <li><strong>Hoover Sign:</strong> Unmasking involuntary hip extension when testing contralateral hip flexion (indicates functional weakness).</li>
+            <li><strong>Tremor Entrainment:</strong> The characteristics of a functional tremor shift or match the frequency of a voluntary tapping rhythm initiated in an unaffected limb.</li>
+            <li>Demonstrable clinical inconsistency and clear distractibility during direct testing.</li>
+        </ul>
+        <p>Modern neurology increasingly frames Functional Neurological Disorder (FND) as a legitimate, objective brain network connectivity dysfunction. <strong>Patients must never be told, "It's all in your head."</strong></p>
+
+        <h2>4. Factitious Disorder</h2>
+        <p>The intentional, deceptive production or feigning of physical or psychological symptoms. The core clinical motivation is an internal psychological need to <strong>assume the sick role</strong>, completely independent of external incentives.</p>
+
+        <h3>Differentiating from Malingering</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Condition</th>
+                    <th>Core Motivation / Gain</th>
+                    <th>Psychiatric Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Factitious Disorder</strong></td>
+                    <td>Internal psychological gain (attention, care, sick role).</td>
+                    <td>Recognized DSM-5-TR Psychiatric Disorder.</td>
+                </tr>
+                <tr>
+                    <td><strong>Malingering</strong></td>
+                    <td>External, tangible gain (money, drugs, avoiding work/legal issues).</td>
+                    <td><strong>NOT</strong> a psychiatric disorder (V-code/condition).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. Psychological Factors Affecting Other Medical Conditions</h2>
+        <p>This diagnosis applies when psychological or behavioral factors adversely affect the development, path of treatment, or prognosis of a verified, co-existing medical condition. Examples include:</p>
+        <ul>
+            <li>Severe anxiety directly worsening acute asthma exacerbations.</li>
+            <li>Chronic environmental stress precipitating severe psoriasis flares.</li>
+            <li>Maladaptive psychological denial leading to poor medication adherence in unstable type 2 diabetes.</li>
+            <li>Major depression documented to worsen clinical mortality outcomes following myocardial infarction.</li>
+        </ul>
+
+        <div class="callout-alert">
+            <div class="callout-title">Red Flags Requiring Immediate Medical Re-Evaluation</div>
+            Do not mistake organic progression for an SSRD. Immediate comprehensive testing is required if the patient presents with: un-explained weight loss, persistent fever, new focal neurological deficits, active GI bleeding, abnormal baseline laboratory profiles, progressive clinical deterioration, night sweats, initial symptom onset after age 50, or a highly aggressive family history of organic disease.
+        </div>
+
+        <hr>
+
+        <h2>Communication Strategies for Physicians</h2>
+        <p>Patient communication is paramount to successful long-term management. Adhering to structured behavioral choices alters clinical trajectories:</p>
+
+        <h3>DO:</h3>
+        <ul>
+            <li>Validate real physical suffering and use explicit empathetic language.</li>
+            <li>Schedule brief, regularly timed follow-up appointments independent of symptom flares.</li>
+            <li>Limit diagnostic investigations strictly to objective clinical changes.</li>
+            <li>Prioritize and actively encourage incremental improvements in daily functionality.</li>
+        </ul>
+
+        <h3>DON'T:</h3>
+        <ul>
+            <li>Say "there is absolutely nothing wrong with you."</li>
+            <li>Dismiss complex complaints by stating "it is purely psychological."</li>
+            <li>Order defensive, open-ended, or unnecessary diagnostic testing panels.</li>
+        </ul>
+
+        <p><strong>Recommended Language Adaptation:</strong><br>
+        Instead of: <em>"Your tests are perfectly normal."</em><br>
+        Say: <strong>"Your physical symptoms are completely real, but our tests show that your central nervous system appears to be overly sensitized."</strong></p>
+
+        <hr>
+
+        <h2>Non-Pharmacological Management</h2>
+        <h3>First-Line Treatment</h3>
+        <p><strong>Cognitive Behavioral Therapy (CBT)</strong> maintains the strongest empirical evidence base. Interventions directly target cognitive catastrophization, somatic hypervigilance, and systemic avoidance behaviors.</p>
+
+        <h3>Adjunctive Therapies</h3>
+        <ul>
+            <li>Mindfulness-based stress reduction (MBSR) and Acceptance and Commitment Therapy (ACT).</li>
+            <li>Structured psychodynamic therapy.</li>
+            <li>Tailored physical rehabilitation and graded occupational therapy programs (especially for Conversion Disorder/FND).</li>
+        </ul>
+
+        <hr>
+
+        <h2>Pharmacological Management</h2>
+        <p><strong>Important Prescribing Principle:</strong> Medications are utilized to actively treat comorbid anxiety, major depression, central pain amplification, severe insomnia, or autonomic hyperarousal. <strong>There is no specific "anti-somatic" class of medication.</strong></p>
+
+        <h3>First-Line Pharmacological Agents (SSRIs)</h3>
+        <p>SSRIs demonstrate the highest efficacy for treating health anxiety, somatic symptom burdens, and comorbid mood disorders.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Generic Name</th>
+                    <th>Starting Dose</th>
+                    <th>Target Dose Range</th>
+                    <th>Clinical Notes & Advantages</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sertraline</strong></td>
+                    <td>25–50 mg daily</td>
+                    <td>50–200 mg/day</td>
+                    <td>Excellent anxiety efficacy profile; safe cardiovascular profile; highly accessible.</td>
+                </tr>
+                <tr>
+                    <td><strong>Escitalopram</strong></td>
+                    <td>5–10 mg daily</td>
+                    <td>10–20 mg/day</td>
+                    <td>Generally well-tolerated profile; demonstrates a low propensity for hepatic drug interactions.</td>
+                </tr>
+                <tr>
+                    <td><strong>Fluoxetine</strong></td>
+                    <td>10–20 mg daily</td>
+                    <td>20–60 mg/day</td>
+                    <td>Highly activating formulation; long half-life. <em>Avoid in patients with severe baseline insomnia or marked agitation.</em></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Serotonin-Norepinephrine Reuptake Inhibitors (SNRIs)</h3>
+        <p>Highly useful when comorbid chronic pain, fibromyalgia, or neuropathic symptoms are major components of the clinical presentation.</p>
+        <ul>
+            <li><strong>Duloxetine:</strong> Start at 30 mg/day, targeting 60–120 mg/day. Excellent efficacy for pain + anxiety configurations; FDA-approved for neuropathic pain and fibromyalgia.</li>
+            <li><strong>Venlafaxine:</strong> Start at 37.5–75 mg/day, targeting 75–225 mg/day. Requires regular blood pressure monitoring and structured taper down due to withdrawal susceptibility.</li>
+        </ul>
+
+        <h3>Tricyclic Antidepressants (TCAs)</h3>
+        <p>Effective in low-dose configurations for managing somatic pain syndromes, IBS, and chronic headache variations.</p>
+        <ul>
+            <li><strong>Amitriptyline:</strong> Implement a low-dose bedtime strategy (10–25 mg at bedtime), titrating carefully within a typical range of 25–100 mg/day. Provides beneficial sedation and pain modulation, but is restricted by anticholinergic risks, cardiac conduction risks, and high sedation. <em>Use with extreme caution in elderly demographics.</em></li>
+        </ul>
+
+        <h3>Gabapentinoids</h3>
+        <p>Indicated when central sensitization, fibromyalgia, or neuropathic pain overlap with severe, generalized anxiety.</p>
+        <ul>
+            <li><strong>Pregabalin:</strong> Begin with 25–75 mg nightly, targeting a divided dose of 150–450 mg/day. Strongly modulates sleep architecture and central pain pathways. Monitor patients closely for weight gain, daytime sedation, and potential misuse or dependence patterns.</li>
+        </ul>
+
+        <div class="callout-alert">
+            <div class="callout-title">Benzodiazepines Warning</div>
+            <strong>Generally avoid long-term benzodiazepine usage.</strong> Chronic administration routinely worsens clinical dependence patterns, increases validation/reassurance-seeking loops, and compounds cognitive impairment. Limit utilization strictly to ultra-short-term coverage for severe acute crises (e.g., Clonazepam 0.25–0.5 mg PRN short-term).
+        </div>
+
+        <h3>Other Adjunctive Formulations</h3>
+        <ul>
+            <li><strong>Antipsychotics:</strong> Not routinely recommended. May be considered at ultra-low doses (e.g., low-dose atypical antipsychotics) exclusively for severe, refractory presentations or marked somatic delusions.</li>
+            <li><strong>Sleep Management:</strong> Prioritize structural sleep hygiene and CBT for Insomnia (CBT-I). If pharmacotherapy is required, selectively utilize low-dose Trazodone, Mirtazapine, or Amitriptyline.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Chronic Pain & FND Management Models</h2>
+        <p>SSRD displays deep pathogenetic overlap with chronic conditions like fibromyalgia, IBS, chronic fatigue syndrome, TMJ disorders, and functional dyspepsia. Managing these overlapping conditions requires a structured behavioral approach.</p>
+
+        <h3>FND Treatment Strategy</h3>
+        <p>Optimal clinical outcomes are driven by interdisciplinary care combinations incorporating specialized physical therapy, structured CBT, and comprehensive psychoeducation regarding neural network pathways. Medications treat secondary comorbidities, not the core neurological conversion deficit.</p>
+
+        <h3>Managing Complex Consultations (5-Step Model)</h3>
+        <div class="algorithm-step"><div class="step-number">1</div><div><strong>Validate Symptoms:</strong> Explicitly confirm that the patient's physical symptoms and distress are genuine.</div></div>
+        <div class="algorithm-step"><div class="step-number">2</div><div><strong>Explain Sensitization:</strong> Map the symptoms to central nervous system pathways and sensitization patterns.</div></div>
+        <div class="algorithm-step"><div class="step-number">3</div><div><strong>Avoid Confrontation:</strong> Refuse to engage in diagnostic standoffs regarding whether a symptom is "physical vs. mental."</div></div>
+        <div class="algorithm-step"><div class="step-number">4</div><div><strong>Set Functional Goals:</strong> Pivot the clinical focus away from absolute symptom elimination toward measurable daily function.</div></div>
+        <div class="algorithm-step"><div class="step-number">5</div><div><strong>Scheduled Follow-Up:</strong> Establish regular, brief appointments to prevent emergency-driven visits.</div></div>
+
+        <hr>
+
+        <h2>Prognosis and Recent Advances</h2>
+        
+        <h3>Prognostic Indicators</h3>
+        <ul>
+            <li><strong>Favorable Factors:</strong> Early clinical detection, a strong therapeutic alliance, mild initial baseline symptoms, and preserved psychological insight.</li>
+            <li><strong>Unfavorable Factors:</strong> Co-existing personality disorders, severe childhood or chronic trauma history, entrenched disability status, and concurrent substance misuse.</li>
+        </ul>
+
+        <h3>Recent Research Advances</h3>
+        <p>Contemporary clinical psychiatric research actively supports the <strong>Predictive Processing Model</strong>, central sensitization paradigms, neuroimmune interactions, and identifiable structural functional connectivity abnormalities across brain networks. Systems are trending toward early integrated psychosomatic clinics, collaborative care models, and digital CBT (dCBT) portals.</p>
+
+        <hr>
+
+        <h2>Key Take-Home Messages</h2>
+        <ul>
+            <li>Physical symptoms presented in SSRD are entirely real, requiring validation, not dismissive attitudes.</li>
+            <li>CBT remains the primary first-line therapeutic intervention.</li>
+            <li>SSRIs and SNRIs should be explicitly reserved for managing comorbid anxiety, mood disorders, and concurrent central pain pathways.</li>
+            <li>Repetitive, unindicated diagnostic investigations amplify maladaptive illness behaviors.</li>
+            <li>Maintaining a consistent, non-confrontational therapeutic alliance is the cornerstone of clinical management.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Suggested References</h2>
+        <ul>
+            <li><strong>Diagnostic:</strong> <em>Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR).</em></li>
+            <li><strong>Guidelines & Reviews:</strong> American Psychiatric Association, National Institute for Health and Care Excellence (NICE), World Health Organization (WHO).</li>
+            <li><strong>Key Scholarly Journals:</strong> <em>JAMA Psychiatry, The Lancet Psychiatry, Psychosomatic Medicine.</em></li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2026 Dr. Hamid Fazal. Provided as an open educational medical resource for clinicians and healthcare professionals.
+    </footer>
+
+</div>
+
+</body>
+</html>
+
